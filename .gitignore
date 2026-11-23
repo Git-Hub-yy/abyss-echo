@@ -79,6 +79,7 @@ desktop.ini
 *.bak_before_fix.meta
 *.bak
 *.bak.meta
+*.bak_*
 *.slnx
 
 # ────────── 日志与临时输出 ──────────
