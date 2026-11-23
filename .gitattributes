@@ -1,0 +1,61 @@
+# ═══════════════════════════════════════════════════════════
+#  Git LFS 配置（大文件）
+# ═══════════════════════════════════════════════════════════
+#
+#  说明：
+#    当前项目最大的资源文件是 7.4 MB 的 2K 法线贴图，
+#    没有超过 GitHub 单文件 100 MB 限制，因此暂不需要 LFS。
+#
+#    如果以后加入更大的资源（例如 > 50 MB 的模型/贴图），
+#    取消下面几行的注释并执行：
+#        git lfs install
+#        git lfs track "*.psd"
+#        git add .gitattributes
+#
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.tga filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text
+# ═══════════════════════════════════════════════════════════
+
+# ────────── 换行符规范 ──────────
+#   源码强制 LF，避免 Windows/Linux 协作时整文件 diff
+* text=auto
+
+*.cs       text diff=csharp
+*.shader   text diff=text
+*.hlsl     text diff=text
+*.cginc    text diff=text
+*.compute  text diff=text
+*.json     text
+*.xml      text
+*.md       text
+*.txt      text
+
+# ────────── Unity 资源文件（YAML，保持原样）──────────
+*.unity    text
+*.prefab   text
+*.asset    text
+*.mat      text
+*.controller text
+*.anim     text
+*.overrideController text
+*.meta     text
+
+# ────────── 二进制资源（不做换行符转换）──────────
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.tga      binary
+*.psd      binary
+*.fbx      binary
+*.obj      binary
+*.wav      binary
+*.mp3      binary
+*.ogg      binary
+*.dll      binary
+*.so       binary
+*.a        binary
+*.lib      binary
+*.exe      binary
+*.unitypackage binary

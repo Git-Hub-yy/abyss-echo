@@ -1,0 +1,92 @@
+# ═══════════════════════════════════════════════════════════
+#  ABYSS ECHO · Unity 项目 .gitignore
+# ═══════════════════════════════════════════════════════════
+#
+#  设计原则：
+#    · 排除所有 Unity 自动生成的目录（Library/Temp/Obj 等）
+#      这些文件体积巨大（Library 单目录 1.75 GB）且可完全重建
+#    · 排除 IDE 生成的工程文件（.csproj / .sln）
+#    · 排除操作系统产生的垃圾文件
+#    · 保留 Assets/ 与 ProjectSettings/ 的全部内容
+#      —— 这两个目录才是项目的真正源文件
+#
+# ═══════════════════════════════════════════════════════════
+
+# ────────── Unity 自动生成的目录 ──────────
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# ────────── Asset Store 下载缓存 ──────────
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# ────────── Visual Studio / Rider 生成文件 ──────────
+.vs/
+.vsconfig
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.opendb
+
+# ────────── 构建产物 ──────────
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# ────────── 崩溃报告 ──────────
+sysinfo.txt
+crashlytics-build.properties
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ────────── 操作系统垃圾文件 ──────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+Thumbs.db
+desktop.ini
+
+# ────────── 项目内的临时/损坏备份文件 ──────────
+#   这些是开发过程中留下的场景备份，不应进版本库
+*.corrupted_bak
+*.corrupted_bak.meta
+*.polluted_bak
+*.polluted_bak.meta
+*.bak_before_fix
+*.bak_before_fix.meta
+*.bak
+*.bak.meta
+*.slnx
+
+# ────────── 日志与临时输出 ──────────
+*.log
+_temp_*
+
+# ═══════════════════════════════════════════════════════════
+#  注意：
+#  Assets/ 下的 .meta 文件**必须**提交，不能忽略！
+#  它们保存了资源的 GUID，丢失会导致场景引用全部断裂。
+# ═══════════════════════════════════════════════════════════
